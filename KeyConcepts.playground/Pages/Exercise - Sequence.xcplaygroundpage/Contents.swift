@@ -35,16 +35,29 @@ let lightRed = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
 // HINT: Remember that all shapes have a fill and a border.
 //       You can turn off the fill or border if desired.
 
-// No border, has a fill
+// No border, Yes Fill
 canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 50, height: 75)
 
-// Has a border, no fill
-canvas.drawShapesWithBorders = true
-canvas.drawShapesWithFill = false
-canvas.drawEllipse(at: Point(x: 200, y: 100), width: 50, height: 75)
+//Fill background
+canvas.fillColor = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
 
+// Draw red Circle
+canvas.fillColor = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
+canvas.drawEllipse(at: Point(x: 200, y: 200), width: 300, height: 300)
+
+// Draw middle of red circle
+canvas.fillColor = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
+canvas.drawEllipse(at: Point(x: 200, y: 200), width: 150, height: 150)
+
+// Draw Blue circle
+canvas.fillColor = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)
+canvas.drawEllipse(at: Point(x: 350, y: 200), width: 300, height: 300)
+
+// Draw Middle of circle
+canvas.fillColor = Color(hue: 219, saturation: 1, brightness: 82, alpha: 0)
+canvas.drawEllipse(at: Point(x: 350, y: 200), width: 150, height: 150)
 
 /*:
  ## Template code
