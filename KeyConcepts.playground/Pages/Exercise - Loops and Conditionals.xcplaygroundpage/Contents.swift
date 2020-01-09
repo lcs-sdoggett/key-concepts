@@ -38,6 +38,47 @@ let neonGreen = Color(hue: 107, saturation: 61, brightness: 93, alpha: 100)
 // HINT: Remember that all shapes have a fill and a border.
 //       You can turn off the fill or border if desired.
 
+// Use fills, with no borders
+canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = true
+
+// Make a background
+canvas.fillColor = Color(hue: 12, saturation: 78, brightness: 92, alpha: 100)
+canvas.drawRectangle(at: CGPoint(x: 0, y: 0), width: canvas.width, height: canvas.height)
+
+// Draw green and blue rectangles
+for i in 0...3 {
+    canvas.fillColor = Color(hue: 195, saturation: 63, brightness: 92, alpha: 100)
+    canvas.drawRectangle(at: CGPoint(x: i * 100, y: 0), width: 50, height: 350)
+    canvas.fillColor = Color(hue: 107, saturation: 61, brightness: 93, alpha: 100)
+    canvas.drawRectangle(at: CGPoint(x: i * 100 + 50, y: 50), width: 50, height: 350)
+}
+
+// Change text colour
+canvas.textColor = Color.white
+
+// Add Big label
+canvas.drawText(message: "sloan", at: CGPoint(x: 150, y: 400), size: 95, kerning: 0.0)
+
+// Variables usefull for adding words to proper collunm and row
+let topRow = 560
+let secondRow = 545
+let thirdRow = 530
+let firstCollunm = 20
+let secondCollunm = 150
+let thirdCollunm = 275
+
+// Write all small words at top
+canvas.drawText(message: "saturday", at: CGPoint(x: firstCollunm, y: topRow), size: 10, kerning: 0.0)
+canvas.drawText(message: "with", at: CGPoint(x: secondCollunm, y: topRow), size: 10, kerning: 0.0)
+canvas.drawText(message: "camaro's cafe", at: CGPoint(x: thirdCollunm, y: topRow), size: 10, kerning: 0.0)
+canvas.drawText(message: "december 19 1992", at: CGPoint(x: firstCollunm, y: secondRow), size: 10, kerning: 0.0)
+canvas.drawText(message: "thrust hermit", at: CGPoint(x: secondCollunm, y: secondRow), size: 10, kerning: 0.0)
+canvas.drawText(message: "halifax", at: CGPoint(x: thirdCollunm, y: secondRow), size: 10, kerning: 0.0)
+canvas.drawText(message: "9 pm", at: CGPoint(x: firstCollunm, y: thirdRow), size: 10, kerning: 0.0)
+canvas.drawText(message: "the quanhogs", at: CGPoint(x: secondCollunm, y: thirdRow), size: 10, kerning: 0.0)
+canvas.drawText(message: "nova scotia", at: CGPoint(x: thirdCollunm, y: thirdRow), size: 10, kerning: 0.0)
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
