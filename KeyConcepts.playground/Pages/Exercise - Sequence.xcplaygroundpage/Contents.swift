@@ -36,28 +36,33 @@ let lightRed = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
 //       You can turn off the fill or border if desired.
 
 // No border, Yes Fill
-canvas.drawShapesWithBorders = false
+canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = true
+canvas.defaultBorderWidth = 50
 
 //Fill background
 canvas.fillColor = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
 
-// Draw red Circle
-canvas.fillColor = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
-canvas.drawEllipse(at: Point(x: 200, y: 200), width: 300, height: 300)
+// Set variables to draw cirlces
+canvas.drawShapesWithFill = false
+canvas.defaultBorderWidth = 100
 
-// Draw middle of red circle
-canvas.fillColor = Color(hue: 219, saturation: 1, brightness: 82, alpha: 100)
-canvas.drawEllipse(at: Point(x: 200, y: 200), width: 150, height: 150)
+
+// Draw red Circle
+canvas.borderColor = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
+canvas.drawEllipse(at: Point(x: 200, y: 200), width: 275, height: 275)
+
 
 // Draw Blue circle
-canvas.fillColor = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)
-canvas.drawEllipse(at: Point(x: 350, y: 200), width: 300, height: 300)
+canvas.borderColor = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)
+canvas.drawEllipse(at: Point(x: 350, y: 200), width: 275, height: 275)
 
-// Draw Middle of circle
-canvas.fillColor = Color(hue: 219, saturation: 1, brightness: 82, alpha: 0)
-canvas.drawEllipse(at: Point(x: 350, y: 200), width: 150, height: 150)
+
+canvas.drawText(message: "the jesus", at: Point(x: 15, y: 450), size: 40, kerning: 0.0)
+canvas.drawText(message: "and mary chain", at: Point(x: 15, y: 405), size: 40, kerning: 0.0)
+
+
 
 /*:
  ## Template code
